@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hng-bz-AKC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Up View Controller-->
+        <scene sceneID="9qI-B1-3sk">
+            <objects>
+                <viewController id="hng-bz-AKC" customClass="StartUpViewController" customModule="MissionTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kPS-DF-mET">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NHQ-CH-83W">
+                                <rect key="frame" x="73.666666666666686" y="326" width="246" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="Ey9-Vt-IpG"/>
+                                    <constraint firstAttribute="height" constant="200" id="o9a-2X-0VI"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vwP-Ce-QkO">
+                                <rect key="frame" x="126.00000000000001" y="585" width="141.33333333333337" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jh6-kW-vR6">
+                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="36"/>
+                                        <color key="tintColor" red="0.94901960780000005" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="NewProject">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.94901960780000005" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="Verdana-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl5-kv-m1F">
+                                        <rect key="frame" x="0.0" y="46" width="141.33333333333334" height="36"/>
+                                        <color key="tintColor" red="0.94901960780000005" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="ProjectList">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.94901960780000005" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="Verdana-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hx5-Bb-R8j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NHQ-CH-83W" firstAttribute="centerY" secondItem="kPS-DF-mET" secondAttribute="centerY" id="2Pt-J3-nXD"/>
+                            <constraint firstItem="vwP-Ce-QkO" firstAttribute="centerX" secondItem="kPS-DF-mET" secondAttribute="centerX" id="8WT-2F-Lef"/>
+                            <constraint firstItem="vwP-Ce-QkO" firstAttribute="top" secondItem="NHQ-CH-83W" secondAttribute="bottom" constant="59" id="L6J-V1-NJ5"/>
+                            <constraint firstItem="NHQ-CH-83W" firstAttribute="centerX" secondItem="kPS-DF-mET" secondAttribute="centerX" id="vtD-Ns-qIB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newProjectButton" destination="jh6-kW-vR6" id="ofO-Df-6LJ"/>
+                        <outlet property="projectListButton" destination="Wl5-kv-m1F" id="Du3-Vt-zZ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uqq-j8-eGc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1910.6870229007632" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="445" height="456"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

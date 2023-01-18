@@ -18,6 +18,10 @@ class ListViewController: UIViewController {
     var dataid = Int()
     
     
+    
+    
+    
+    
     @IBOutlet var tableView: UITableView!
     
     //ピンク

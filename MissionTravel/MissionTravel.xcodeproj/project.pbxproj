@@ -25,6 +25,10 @@
 		03C12C36284DEC9D0030A303 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 03C12C35284DEC9D0030A303 /* RealmSwift */; };
 		03C12C3C284E4C9A0030A303 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C12C3B284E4C9A0030A303 /* EditViewController.swift */; };
 		03C12C3E284E58FD0030A303 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C12C3D284E58FD0030A303 /* ListViewController.swift */; };
+		73D66A3E29780DA8003A786C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73D66A3D29780DA8003A786C /* Localizable.strings */; };
+		73D66A4029780DB0003A786C /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D66A3F29780DB0003A786C /* Localized.swift */; };
+		73D66A4229780DBA003A786C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D66A4129780DBA003A786C /* Assets.swift */; };
+		73D66A4429780DFE003A786C /* Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D66A4329780DFE003A786C /* Instantiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		03C12C25284DEBE20030A303 /* MissionTravelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTravelUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		03C12C3B284E4C9A0030A303 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		03C12C3D284E58FD0030A303 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		73D66A3D29780DA8003A786C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		73D66A3F29780DB0003A786C /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		73D66A4129780DBA003A786C /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		73D66A4329780DFE003A786C /* Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,7 @@
 		03C12BFE284DEBE00030A303 /* MissionTravel */ = {
 			isa = PBXGroup;
 			children = (
+				73D66A3C29780D86003A786C /* Common */,
 				03C12BFF284DEBE00030A303 /* AppDelegate.swift */,
 				03C12C01284DEBE00030A303 /* SceneDelegate.swift */,
 				0342C5D22854942800E17458 /* ViewController */,
@@ -166,6 +175,17 @@
 			path = MissionTravelUITests;
 			sourceTree = "<group>";
 		};
+		73D66A3C29780D86003A786C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				73D66A3D29780DA8003A786C /* Localizable.strings */,
+				73D66A3F29780DB0003A786C /* Localized.swift */,
+				73D66A4129780DBA003A786C /* Assets.swift */,
+				73D66A4329780DFE003A786C /* Instantiable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +196,8 @@
 				03C12BF8284DEBE00030A303 /* Sources */,
 				03C12BF9284DEBE00030A303 /* Frameworks */,
 				03C12BFA284DEBE00030A303 /* Resources */,
+				73D66A3A29780C3C003A786C /* ShellScript */,
+				73D66A3B29780C57003A786C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -281,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C12C0F284DEBE20030A303 /* LaunchScreen.storyboard in Resources */,
+				73D66A3E29780DA8003A786C /* Localizable.strings in Resources */,
 				03C12C0C284DEBE20030A303 /* Assets.xcassets in Resources */,
 				03C12C07284DEBE00030A303 /* Main.storyboard in Resources */,
 			);
@@ -302,6 +325,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		73D66A3A29780C3C003A786C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d /opt/homebrew/bin; then\n    PATH=/opt/homebrew/bin/:$PATH\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		73D66A3B29780C57003A786C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=/opt/homebrew/bin:$PATH\n\nif which mint >/dev/null; then\n    # SwiftGen\n    xcrun --sdk macosx mint run swiftgen\nelse \n    echo 'warning: mint not installed.'\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		03C12BF8284DEBE00030A303 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -311,9 +371,12 @@
 				03C12C04284DEBE00030A303 /* ViewController.swift in Sources */,
 				03C12C3E284E58FD0030A303 /* ListViewController.swift in Sources */,
 				03C12C00284DEBE00030A303 /* AppDelegate.swift in Sources */,
+				73D66A4029780DB0003A786C /* Localized.swift in Sources */,
 				03C12C0A284DEBE00030A303 /* MissionTravel.xcdatamodeld in Sources */,
 				0387B8292850683E00C4351E /* Project.swift in Sources */,
 				03C12C02284DEBE00030A303 /* SceneDelegate.swift in Sources */,
+				73D66A4229780DBA003A786C /* Assets.swift in Sources */,
+				73D66A4429780DFE003A786C /* Instantiable.swift in Sources */,
 				0387B82B2851E1A700C4351E /* LookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

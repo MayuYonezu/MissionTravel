@@ -1,0 +1,10 @@
+xcassets:
+    paths: MissionTravel/Assets.xcassets
+    templateName: swift4
+    output: MissionTravel/Common/Assets.swift
+
+strings:
+    paths: MissionTravel/Common/Localizable.strings
+    templateName: structured-swift4
+    output: MissionTravel/Common/Localized.swift
+## https://github.com/SwiftGen/SwiftGen/tree/6.6.2/Documentation/
